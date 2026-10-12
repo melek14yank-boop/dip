@@ -1,0 +1,39 @@
+Kenar Tespit Filtreleri Karşılaştırma Analizi
+Labda veya ödevde Laplacian, Sobel ve Prewitt filtrelerini denerken aradaki farklar net olsun diye düz metin şeklinde şöyle özetleyebiliriz:
+
+1. Laplacian Filtresi
+
+Türev Derecesi: 2. Derece (İzotropik)
+
+Nasıl Çalışır?: Yön seçmez; her yöndeki ani parlaklık değişimini tek seferde yakalar.
+
+Gürültü Durumu: Çok fena etkilenir. İkinci türev olduğu için her şeyi kenar sanır, kesinlikle önce Gauss ile yumuşatmak gerekir.
+
+Çıkan Kenar: Çizgiler ipince ve net olur ama çift kenar (double-edge) yapma huyu vardır.
+
+2. Sobel Filtresi
+
+Türev Derecesi: 1. Derece
+
+Nasıl Çalışır?: Yatay ve dikey ayrı çalışır, merkezdeki piksele daha çok ağırlık verir.
+
+Gürültü Durumu: Daha sağlamdır. Çekirdeğin yapısından dolayı ufak tefek gürültüleri kendi kendine bastırır.
+
+Çıkan Kenar: Kenarlar daha kalın, yumuşak ve akıcı durur.
+
+3. Prewitt Filtresi
+
+Türev Derecesi: 1. Derece
+
+Nasıl Çalışır?: Yatay ve dikey ayrı çalışır ama tüm komşu piksellere eşit ağırlık verir.
+
+Gürültü Durumu: Orta seviyededir. Sobel kadar iyi yumuşatmaz, o yüzden gürültüyü biraz daha belli eder.
+
+Çıkan Kenar: Sobel'e benziyor ama geçişler bi' tık daha sert ve köşelidir.
+
+Tuğla Görseli Üzerinde Ne Gördük?
+Laplacian: Tuğlanın üzerindeki bütün pürüzleri, gözenekleri ve harç yerlerini inanılmaz detaylı çıkardı. Ama gürültüye çok açık olduğu için tuğlanın kendi üzerindeki ufak çatlakları/dokuları bile kenar gibi gösterdi, ortalık biraz karman çorman oldu yani.
+
+Sobel: Yumuşatma özelliği sayesinde tuğla üstündeki o minik pürüzleri eledi. Ana yatay ve dikey derz çizgilerini de gayet temiz, kalın ve düzgün bir şekilde ortaya çıkardı.
+
+Prewitt: Sobel'e çok benziyor zaten mantık olarak ama ağırlıklar eşit olduğu için çizgiler Sobel'e göre biraz daha sert ve köşeli çıktı.
