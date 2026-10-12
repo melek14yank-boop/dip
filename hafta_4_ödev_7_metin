@@ -1,4 +1,4 @@
-### Canny, Sobel ve Prewitt Karşılaştırması
+ Canny, Sobel ve Prewitt Karşılaştırması
 
 Bu çalışmada iki farklı tuğla duvar görüntüsü üzerinde Canny, Sobel ve Prewitt algoritmalarını denedim. Canny algoritması tuğlaların kenarlarını belirgin şekilde tespit etmek için kullanıldı. Sobel ve Prewitt algoritmaları da tuğlalar arasındaki çizgileri ortaya çıkardı.
 
