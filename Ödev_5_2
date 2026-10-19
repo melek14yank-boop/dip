@@ -1,0 +1,27 @@
+# Canny Kenar Bulma Algoritması
+
+Canny kenar bulma algoritması, görüntülerdeki nesnelerin sınırlarını bulmak için kullanılır. Algoritmanın her adımı, daha doğru ve net kenarlar elde etmek için gereklidir.
+
+### 1. Gri Tonlamaya Dönüştürme
+Renkli görüntü gri tonlara çevrilir. Böylece işlem daha basit hâle gelir ve parlaklık değişimleri üzerinden kenarlar bulunabilir.
+
+### 2. Gaussian Filtre
+Görüntüdeki küçük gürültüler azaltılır. Bu adım yapılmazsa gürültüler yanlışlıkla kenar olarak algılanabilir.
+
+### 3. Gradyan Hesaplama
+Pikseller arasındaki parlaklık değişiminin büyüklüğü ve yönü hesaplanır. Böylece kenar olabilecek bölgeler belirlenir.
+
+### 4. Non-Maximum Suppression
+Kenar adayları inceltilir ve yalnızca en belirgin noktalar korunur. Bu işlem sayesinde kalın kenarlar oluşması önlenir.
+
+### 5. Çift Eşikleme
+Pikseller güçlü, zayıf veya kenar olmayan noktalar olarak sınıflandırılır. Böylece gerçek kenarlarla gürültüleri ayırmak kolaylaşır.
+
+### 6. Histerezis ile Kenar Takibi
+Güçlü kenarlara bağlı olan zayıf kenarlar korunur, bağlantısı olmayanlar elenir. Bu sayede kenarların kopuk olması ve gereksiz çizgilerin oluşması azaltılır.
+
+### Sonuç
+Canny algoritmasının her adımı farklı bir sorunu çözerek daha ince, net ve kesintisiz kenarlar elde edilmesini sağlar. Adımların atlanması görüntüde gürültü, kalın kenarlar veya kopuk sınırlar oluşmasına neden olabilir.
+
+### Kaynakça
+- OpenCV – Canny Edge Detection: https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
