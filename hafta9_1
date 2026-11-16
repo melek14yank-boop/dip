@@ -1,0 +1,10 @@
+Görüntü işlemede renkleri göstermek ve görüntü üzerinde işlem yapmak için farklı renk uzayları kullanılır. Hangisini seçeceğimiz, görüntüde neyi bulmak istediğimize bağlıdır.
+
+- **RGB** kırmızı, yeşil ve mavi kanallarından oluşur. Kullanımı kolaydır ve görüntüleri ekranda göstermek için yaygındır. Işık değiştiğinde kanal değerleri de değişebildiği için bir nesneyi rengine göre seçmek zor olabilir.
+- **HSV** renk tonu, doygunluk ve parlaklıktan oluşur. Renk tonu ayrı olduğu için mavi bir topu videoda takip etmek gibi işlerde kullanılır. Griye yakın yerlerde renk tonu güvenilir değildir.
+- **YUV** aydınlık ve renk bilgisini ayrı tutar. Dijital videoda benzer bir gösterim olan **YCbCr** kullanılır. Renk bilgisi azaltılarak video daha az yer kaplar ama fazla azaltılırsa renkli kenarlar bulanıklaşabilir.
+- **CIE Lab** rengin açıklığını ve renk bilgisini ayrı gösterir. İki rengin birbirine ne kadar yakın olduğunu ölçmek için kullanılır. Örneğin üretilen bir parçanın rengi örnek parçayla karşılaştırılabilir. RGB’den Lab’a geçmek ek hesaplama gerektirir.
+- **Gri tonlama** görüntüyü tek kanalla gösterir. Daha az veriyle işlem yapıldığı için kenar bulmada tercih edilir. Renk bilgisi kaybolduğu için benzer gri tona dönüşen farklı renkleri ayırmak zorlaşır.
+
+
+
